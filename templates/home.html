@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calulcate</title>
+</head>
+<body>
+<form action="{% url 'calculate' %}" method="POST">{% csrf_token %}
+	Enter Value of N :
+	<input type="number" name="value_n"><br><br>
+	Enter Value of X :
+	<input type="number" name="value_x"><br><br>
+	<button type="submit">Submit</button>
+</form>
+<br><br>
+{% if result %}
+<div>
+	Result :<b> {{result}}</b>
+</div>
+{% endif %}
+</body>
+</html>
